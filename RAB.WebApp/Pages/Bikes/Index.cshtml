@@ -1,0 +1,75 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+<div class="cards-container">
+    <h1>Our Bikes</h1>
+    @foreach (var item in Model.Bikes)
+    {
+        <div class="card">
+            <h5 class="card-title">@item.Brand @item.Reference</h5>
+            <img src="~/images/Bikes/@item.Image" class="card-img-top" alt="">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <table class="table table-sm content-table">
+                <tr>
+                    <td>Marca: @item.Brand</td>
+                    <td>Marco: @item.Frame</td>
+                </tr>
+                <tr>
+                    <td>Tipo: @item.Type</td>
+                    <td>Talla: @item.Size</td>
+                </tr>
+            </table>
+            <a class="list-group-item collapsed"
+               data-toggle="collapse"
+               href="#@item.Brand@item.Reference"
+               aria-expanded="false"></a>
+            <div class="collapse" id="@item.Brand@item.Reference">
+                <table class="table table-sm">
+                    <tr>
+                        <td>Frenos: </td>
+                        <td>@item.Brakes</td>
+                    </tr>
+                    <tr>
+                        <td>Manubrio:</td>
+                        <td>@item.Handle</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>Pedales: </td>
+                        <td>@item.Pedals</td>
+                    </tr>
+                    <tr>
+                        <td>Velocidades: </td>
+                        <td>@item.Speeds</td>
+                    </tr>
+                    <tr>
+                        <td>Rin: </td>
+                        <td>@item.Rin</td>
+                    </tr>
+                    <tr>
+                        <td>Llantas: </td>
+                        <td>@item.Tires</td>
+                    </tr>
+                    <tr>
+                        <td>Disponibles: </td>
+                        <td>@item.Available</td>
+                    </tr>
+                    <tr>
+                        <td>Precio/Hora</td>
+                        <td>@item.PriceHour</td>
+                    </tr>
+                </table>
+                <button type="button"
+                        class="btn btn-primary book-bike"
+                        asp-route-id="@item.IdBike">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    }
+</div>

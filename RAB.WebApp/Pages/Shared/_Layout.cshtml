@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - RentABike</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
@@ -43,47 +44,54 @@
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer class="page-footer font-small blue pt-4">
-            <div class="container-fluid text-center text-md-left">
-                <div class="row">
-                    <div class="col-md-6 mt-md-0 mt-3">
-                        <h5 class="text-uppercase">Footer Content</h5>
-                        <p>Description here!</p>
-                    </div>
-                    <!-- Grid column -->
-                    <div class="col-md-3 mb-md-0 mb-3">
-                        <h5 class="text-uppercase">MAPA</h5>
-                        <p>Mapa</p>
-                    </div>
-                    <div class="col-md-3 mb-md-0 mb-3">
-                        <!-- Links -->
-                        <h5 class="text-uppercase">Follow US</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#!">Facebook</a>
-                            </li>
-                            <li>
-                                <a href="#!">Instagram</a>
-                            </li>
-                            <li>
-                                <a href="#!">Linquedin</a>
-                            </li>
-                            <li>
-                                <a href="#!">YouTube</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright text-center py-3">
-                © 2019 Copyright:
-                <a href="https://arkaniatec.com"> Arkania Technologies</a>
-            </div>
-        </footer>
+
+    <div class="my-container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
+   
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center text-md-left myfooter">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase"><b>Rent a Bike</b></h5>
+                    <p style="text-align:justify">
+                        Feugiat eirmod eros et clita voluptua est elit voluptua takimata
+                        vero diam et praesent aliquyam facilisis amet diam dolores esse Takimata sit est no vero
+                        vulputate duo lorem sit sit magna accusam tation gubergren lorem nonumy dolor diam ut et
+                        ea magna amet magna at voluptua vero eirmod diam dolor sit ipsum facilisi commodo tempor
+                        ut minim lorem duis tation laoreet eleifend sit ea ea sadipscing ut vulputate ea et kasd
+                        amet qui illum justo tation et ipsum dolores autem
+                    </p>
+                </div>
+                <!-- Grid column -->
+    <div class="col-md-3 mb-md-0 mb-3">
+        <h5 class="text-uppercase"><b>Location</b></h5>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9913417051625!2d-75.56878368590665!3d6.264868027855633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428e695083c29%3A0x99f177323f8c67d5!2sRuta%20N!5e0!3m2!1sen!2sco!4v1571544508914!5m2!1sen!2sco"
+                    width="250" height="150"
+                    frameborder="0"
+                    style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <div class="col-md-3 mb-md-0 mb-3">
+        <!-- Links -->
+        <h5 class="text-uppercase"><b>Follow US</b></h5>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+     </div>
+    </div>
+    </div>
+    <div class="footer-copyright text-center py-3 myfooterCopyRight">
+        © 2019 Copyright:
+        <a href="https://arkaniatec.com"> Arkania Technologies</a>
+    </div>
+    </footer>
+  
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
